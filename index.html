@@ -2,69 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta tags for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Epolite.net</title>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0d1117;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-size: 24px;
-        }
-        
-        a {
-            color: wheat;
-        }
-        
-        li {
-            margin-top: 10px;
-        }
+        /* Reset some basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-image: url('/assets/tile.jpg');
+    background-repeat: repeat;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2; /* Fallback background color */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White background for the content area */
+    padding: 40px 60px;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+main a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+.skills {
+    columns: 2; /* For modern browsers */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    .skills {
+        columns: 1;
+    }
+}
+    
     </style>
 </head>
 <body>
-<h1>Hello, my name is Alexander Epolite.</h1>
-<p>View my work on GitHub: <a href="https://github.com/alexanderepolite">https://github.com/alexanderepolite</a></p>
-<p>Email me: <a href="mailto:alexander@epolite.net">alexander@epolite.net</a> (<a href="/pubkey.txt">pubkey</a>).</p>
-<p><a href="/session.txt">Contact me on Session</a>.</p>
+    <div class="container">
+        <header>
+            <h1>Hello, I'm Alexander Epolite</h1>
+        </header>
+        <main>
+            <section>
+                <p>View my work on GitHub: <a href="https://github.com/alexanderepolite">github.com/AlexanderEpolite</a></p>
+                <p>Email me: <a href="mailto:alexander@epolite.net">alexander@epolite.net</a> (<a href="/pubkey.txt" target="_blank">GPG Public Key</a> and <a href="/pubkey-epolite.txt" target="_blank">EPOLITE Public Key</a>).</p>
+            </section>
 
-<p>Subdomains:</p>
-<ul>
-    <li>
-        <a href="https://encrypt.epolite.net">encrypt.epolite.net</a> - encrypt a message using a public key for emails.
-    </li>
-</ul>
+            <section>
+                <h2>Utilities</h2>
+                <ul>
+                    <li>
+                        <a href="https://test.epolite.net">test.epolite.net</a> - Testing util for EPOLITE post-quantum encryption.
+                    </li>
+                    <li>
+                        <a href="https://encrypt.epolite.net">encrypt.epolite.net</a> - Encrypt a message using a public key for emails.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <a href="https://tempmail.lol">TempMail.lol</a> - A temporary email address generator.
+                    </li>
+                    <li>
+                        <a href="https://github.com/alexanderepolite/wordnik-javascript-api">Wordnik JavaScript API</a> - A typed Wordnik API for JavaScript.
+                    </li>
+                    <li>
+                        <a href="https://dis.quest">DisQuest</a> - A Discord bot that allows you to create custom invites for Discord servers.
+                    </li>
+                    <li>
+                        <a href="https://github.com/alexanderepolite/node-radio-server">Node Radio Server</a> - A server that broadcasts synchronized music to multiple clients.
+                    </li>
+                    <li>An awesome chat program which is still in development.</li>
+                    <li>Other projects which will be posted soon :)</li>
+                </ul>
+            </section>
 
-<p>Projects:</p>
-<ul>
-    <li>
-        <a href="https://tempmail.lol">tempmail.lol</a> - A temporary email address generator.
-        <ul>
-            <li>
-                <a href="https://github.com/tempmail-lol/api-javascript">JavaScript API</a> for TempMail.lol
-            </li>
-            <li>
-                <a href="https://github.com/tempmail-lol/api-java">Java API</a> for TempMail.lol
-            </li>
-        </ul>
-    </li>
-    <li><a href="https://github.com/alexanderepolite/wordnik-javascript-api">Wordnik JavaScript API</a> - A (typed) Wordnik API for JavaScript.</li>
-    <li><a href="https://dis.quest">DisQuest</a> - A Discord bot that allows you to create custom invites for Discord servers.</li>
-    <li><a href="https://github.com/alexanderepolite/node-radio-server">Node Radio Server</a> - A server which broadcasts synchronized music to multiple clients.</li>
-    <li>Other projects which will be posted soon :)</li>
-</ul>
-<p>Languages:</p>
-<ul>
-    <li>Java/Kotlin</li>
-    <li>JavaScript/TypeScript</li>
-    <li>C++</li>
-    <li>C</li>
-    <li>PHP</li>
-</ul>
-<p>Frameworks:</p>
-<ul>
-    <li>React (Native)</li>
-    <li>Expo</li>
-</ul>
+            <section>
+                <h2>Languages</h2>
+                <ul class="skills">
+                    <li>Java/Kotlin</li>
+                    <li>JavaScript/TypeScript</li>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>PHP</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Frameworks</h2>
+                <ul class="skills">
+                    <li>Vue3</li>
+                    <li>Expo</li>
+                    <li>Elysia</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Alexander Epolite</p>
+        </footer>
+    </div>
 </body>
 </html>
